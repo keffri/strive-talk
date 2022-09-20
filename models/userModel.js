@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const UserSchema = new mongoose.Schema({
   username: { type: String, minLength: 4, maxLength: 16, required: true },
-  password: { type: String, minLength: 8, maxLength: 20, required: true },
+  password: { type: String, minLength: 8, required: true },
   isMember: { type: Boolean, default: false },
   isAdmin: { type: Boolean, default: false },
   avatar: {
