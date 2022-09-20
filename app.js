@@ -14,7 +14,7 @@ const app = express();
 app.use(helmet());
 
 const mongoose = require('mongoose');
-const mongoDB = process.env.MONGODB_APPCODE;
+const mongoDB = process.env.MONGO_URI || process.env.MONGODB_APPCODE;
 mongoose.connect(mongoDB, { useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
