@@ -1,10 +1,89 @@
 extends layout 
 
-block content 
-    h1 Sign Up
-    form(action ="" method="POST")
-        label(for="username") Username:
-        input(name="username" placeholder="username" type="text")
-        label(for="password") Password:
-        input(name="password" type="password")
-        button Sign Up
+block content
+    section(class="signup")
+        h1(class="signup__title") Sign Up
+        form(action ="" method="POST" class="signup__form")
+            div(class="signup__form--section")
+                label(class="signup__label" for="username") Username:
+                input(class="signup__input" name="username" type="text" required="true")
+
+            div(class="signup__form--section")
+                label(class="signup__label" for="password") Password:
+                input(class="signup__input" name="password" type="password" required="true")
+
+            div(class="signup__form--section")
+                label(class="signup__label" for="confirmPassword") Confirm password:
+                input(class="signup__input" name="confirmPassword" type="password" required="true")
+
+            div(class="signup__form--section")
+                p Choose your character: 
+                div.character-container
+                    input(id="testament" type="radio" name="character" value="testament" required="true")
+                    label(class="character testament" for="testament")                    
+
+                    input(id="jack-o" type="radio" name="character" value="jack-o" required="true")
+                    label(class="character jack-o" for="jack-o")
+
+                    input(id="nagoriyuki" type="radio" name="character" value="nagoriyuki" required="true")
+                    label(class="character nagoriyuki" for="nagoriyuki")
+
+                    input(id="millia" type="radio" name="character" value="millia" required="true")
+                    label(class="character millia" for="millia")     
+
+                    input(id="chipp" type="radio" name="character" value="chipp" required="true")
+                    label(class="character chipp" for="chipp")         
+
+                    input(id="sol" type="radio" name="character" value="sol" required="true")
+                    label(class="character sol" for="sol")
+
+                    input(id="ky" type="radio" name="character" value="ky" required="true")
+                    label(class="character ky" for="ky")
+
+                    input(id="may" type="radio" name="character" value="may" required="true")
+                    label(class="character may" for="may")         
+                              
+                    input(id="zato-1" type="radio" name="character" value="zato-1" required="true")
+                    label(class="character zato-1" for="zato-1")   
+                
+                    input(id="i-no" type="radio" name="character" value="i-no" required="true")
+                    label(class="character i-no" for="i-no")   
+
+                    input(id="chaos" type="radio" name="character" value="chaos" required="true")
+                    label(class="character chaos" for="chaos")
+
+                    input(id="baiken" type="radio" name="character" value="baiken" required="true")
+                    label(class="character baiken" for="baiken")  
+
+                    input(id="anji" type="radio" name="character" value="anji" required="true")
+                    label(class="character anji" for="anji")  
+
+                    input(id="leo" type="radio" name="character" value="leo" required="true")
+                    label(class="character leo" for="leo")  
+
+                    input(id="faust" type="radio" name="character" value="faust" required="true")
+                    label(class="character faust" for="faust") 
+
+                    input(id="axl" type="radio" name="character" value="axl" required="true")
+                    label(class="character axl" for="axl") 
+
+                    input(id="potemkin" type="radio" name="character" value="potemkin" required="true")
+                    label(class="character potemkin" for="potemkin") 
+
+                    input(id="ramlethal" type="radio" name="character" value="ramlethal" required="true")
+                    label(class="character ramlethal" for="ramlethal")  
+
+                    input(id="giovanna" type="radio" name="character" value="giovanna" required="true")
+                    label(class="character giovanna" for="giovanna") 
+                    
+                    input(id="goldlewis" type="radio" name="character" value="goldlewis" required="true")
+                    label(class="character goldlewis" for="goldlewis")  
+
+                    input(id="bridget" type="radio" name="character" value="bridget" required="true")
+                    label(class="character bridget" for="bridget")     
+
+            if (passwordFail)
+                p(style="color: red") #{passwordFail}
+            if (userFail)
+                p(style="color: red") #{userFail}
+            button Sign Up
