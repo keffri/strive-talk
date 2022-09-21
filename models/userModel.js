@@ -1,37 +1,38 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const UserSchema = new mongoose.Schema({
+const UserSchema = new Schema({
   username: { type: String, minLength: 4, maxLength: 16, required: true },
   password: { type: String, minLength: 8, required: true },
   isMember: { type: Boolean, default: false },
   isAdmin: { type: Boolean, default: false },
-  avatar: {
+  character: {
     type: String,
     required: true,
     enum: [
       'testament',
       'jack-o',
       'nagoriyuki',
-      'millia rage',
-      'chipp zanuff',
-      'sol badguy',
-      'ky kiske',
+      'millia',
+      'chipp',
+      'sol',
+      'ky',
       'may',
       'zato-1',
       'i-no',
+      'chaos',
       'baiken',
       'anji',
-      'leo whitefang',
+      'leo',
       'faust',
-      'axl low',
+      'axl',
       'potemkin',
-      'ramlethal valentine',
+      'ramlethal',
       'giovanna',
-      'goldlewis dickinson',
+      'goldlewis',
       'bridget',
     ],
-    default: 'sol badguy',
+    default: 'sol',
   },
 });
 
