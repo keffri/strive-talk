@@ -1,10 +1,12 @@
 extends layout 
 
 block content 
-    h1 Please log in
-    form(action="/log-in" method="POST")
-        label(for="username") Username:
-        input(name="username" placeholder="username" type="text")
-        label(for="password") Password:
-        input(name="password" type="password")
-        button Log In
+    div(class="container")
+        section(class="login")
+            h1(class="login__title") Login
+            form(class="login__form" action="/log-in" method="POST")
+                label(class="login__label" for="username") Username:
+                input(class="login__input" name="username" type="text")
+                label(class="login__label" for="password") Password:
+                input(class="login__input" name="password" type="password")
+                button(class="login__button") Log In
