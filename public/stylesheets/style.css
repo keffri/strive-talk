@@ -57,33 +57,207 @@ table {
 html, body {
   height: 100vh;
   background-color: #1E0C0E;
-  color: rgba(255, 255, 255, 0.9058823529);
-}
-
-.signup {
-  max-width: 500px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-}
-.signup__title {
-  font-size: 2rem;
-  text-align: center;
-  text-decoration: underline;
-}
-.signup__form--section {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
+  color: #A9A7A8;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
   display: flex;
   justify-content: center;
 }
+.header__link {
+  text-align: center;
+}
 .header__logo {
   width: 500px;
+}
+
+.browser__nav {
+  max-width: 500px;
+  background-color: #101010;
+  padding: 0.75rem 0.5rem;
+  border-radius: 0.5rem;
+  margin: auto;
+}
+.browser__nav--link {
+  color: #A9A7A8;
+  text-decoration: none;
+  font-weight: 800;
+}
+.browser__nav--link:hover {
+  text-decoration: underline;
+}
+.browser__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user__nav {
+  max-width: 700px;
+  background-color: #101010;
+  padding: 0.75rem 0.5rem;
+  border-radius: 0.5rem;
+  margin: auto;
+}
+.user__nav--link {
+  color: #A9A7A8;
+  text-decoration: none;
+  font-weight: 800;
+  margin: 0 1rem;
+}
+.user__nav--link:hover {
+  text-decoration: underline;
+}
+.user__list {
+  display: flex;
+  justify-content: space-between;
+}
+.user__list--inner {
+  display: flex;
+}
+
+.container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.signup {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 1rem;
+  background-color: #101010;
+  border-radius: 1rem;
+}
+.signup__title {
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+.signup__form {
+  display: flex;
+  flex-direction: column;
+}
+.signup__button {
+  height: 1.5rem;
+}
+.signup__form--section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.signup__label {
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+}
+.signup__input {
+  height: 2rem;
+}
+.signup__button {
+  height: 2rem;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  background-color: #101010;
+  width: 60%;
+  padding: 1rem 1rem;
+}
+.login__title {
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+.login__form {
+  display: flex;
+  flex-direction: column;
+}
+.login__label {
+  font-weight: 800;
+  margin: 1rem 0;
+}
+.login__input {
+  height: 2rem;
+}
+.login__button {
+  height: 2rem;
+  margin: 1rem 0;
+}
+
+.access {
+  display: flex;
+  flex-direction: column;
+  background-color: #101010;
+  width: 60%;
+  padding: 1rem 1rem;
+}
+.access__title {
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+.access__form {
+  display: flex;
+  flex-direction: column;
+}
+.access__label {
+  font-weight: 800;
+  margin: 1rem 0;
+}
+.access__input {
+  height: 2rem;
+}
+.access__button {
+  height: 2rem;
+  margin: 1rem 0;
+}
+.access__success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.access__success--text {
+  font-weight: 800;
+  margin: 2rem 0;
+}
+
+.adminAccess {
+  display: flex;
+  flex-direction: column;
+  background-color: #101010;
+  width: 60%;
+  padding: 1rem 1rem;
+}
+.adminAccess__title {
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+.adminAccess__form {
+  display: flex;
+  flex-direction: column;
+}
+.adminAccess__label {
+  font-weight: 800;
+  margin: 1rem 0;
+}
+.adminAccess__input {
+  height: 2rem;
+}
+.adminAccess__button {
+  height: 2rem;
+  margin: 1rem 0;
 }
 
 .character-container {
@@ -102,8 +276,8 @@ html, body {
 }
 
 .character {
-  width: 110px;
-  height: 110px;
+  width: 130px;
+  height: 130px;
   background-position: bottom;
   background-size: cover;
   border: 2px solid #101010;
