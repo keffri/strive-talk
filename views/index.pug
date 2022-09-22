@@ -1,13 +1,26 @@
 extends layout
 
 block content
-  h1 #{title}
   if currentUser
-    h1 Welcome back! #{currentUser.username}
-    a(href="/log-out") Log out 
-  else
-    p Please Login or Sign-up
-    button 
-      a(href="/sign-up") Sign up
-    button 
-      a(href="/log-in") Log in
+    section(class="user")
+      nav(class="user__nav")
+        ul(class="user__list")
+          li
+            a(class="user__nav--link" href="/log-out") LOG OUT
+          li
+            a(class="user__nav--link" href="#") NEW MESSAGE
+          li
+            ul(class="user__list--inner")
+              li
+                a(class="user__nav--link" href="/member-access") MEMBER ACCESS
+              li
+                a(class="user__nav--link" href='admin-access') ADMIN ACCESS
+
+  else 
+    section(class="browser")  
+      nav(class="browser__nav")
+        ul(class="browser__list")
+          li
+            a(class="browser__nav--link" href="/sign-up") SIGN UP
+          li 
+            a(class="browser__nav--link" href="/log-in") LOG IN
