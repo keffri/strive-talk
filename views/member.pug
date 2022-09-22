@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    div(class="container")
+        section(class="access")
+            h1(class="access__title") MEMBER ACCESS
+            if !currentUser 
+                p #{noUser}
+            else if (user.isMember)
+                div(class="access__success")
+                    p(class="access__success--text" style="color: blue") YOU ARE A MEMBER
+                    button
+                        a(href="/") RETURN
+            else 
+                form(class="access__form" action="/member" method="POST")
+                    label(class="access__label" for="memberCode") Please enter the password:
+                    input(Class="access__input" name="memberCode" type="password")
+                    if passwordFail
+                        p(style="color: red") #{passwordFail}
+                    button(class="access__button") ENTER
