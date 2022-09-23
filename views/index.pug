@@ -25,6 +25,10 @@ block content
               p(class="browser__message--title") #{message.subject}
               p #{message.message}
               p #{message.messageDate}
+              if currentUser.isAdmin 
+                form(method="POST" action="/")
+                  input(type="hidden" name="messageid" required="true" value=`${message._id}`)
+                  button(class="browser__message--delete" type="submit") X
 
 
   else 
@@ -44,4 +48,4 @@ block content
             div(class="browser__message--info")
               p(class="browser__message--title") #{message.subject}
               p #{message.message}
-              p #{message.messageDate}
+              p Date: N/A
