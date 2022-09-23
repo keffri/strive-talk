@@ -15,14 +15,16 @@ block content
                 a(class="user__nav--link" href="/member") MEMBER ACCESS
               li
                 a(class="user__nav--link" href='admin') ADMIN ACCESS
-      ul
+      ul(class="browser__messages")
         each message in messages
-          li
-            p(class=`character ${message.user.character}`)
-            p User: #{message.user.username}
-            p Subject: #{message.subject}
-            p Message: #{message.message}
-            p Date: #{message.date}
+          li(class="browser__message")
+            div(class="browser__message--user")
+              p(class=`character ${message.user.character}`)
+              p #{message.user.username}
+            div(class="browser__message--info")
+              p(class="browser__message--title") #{message.subject}
+              p #{message.message}
+              p #{message.messageDate}
 
 
   else 
@@ -33,11 +35,13 @@ block content
             a(class="browser__nav--link" href="/sign-up") SIGN UP
           li 
             a(class="browser__nav--link" href="/log-in") LOG IN
-      ul
+      ul(class="browser__messages")
         each message in messages
-          li
-            p(class=`character ${message.user.character}`)
-            p User: Anonymous
-            p Subject: #{message.subject}
-            p Message: #{message.message}
-            p Date: #{message.date}
+          li(class="browser__message")
+            div(class="browser__message--user")
+              p(class=`character ${message.user.character}`)
+              p Anonymous
+            div(class="browser__message--info")
+              p(class="browser__message--title") #{message.subject}
+              p #{message.message}
+              p #{message.messageDate}
