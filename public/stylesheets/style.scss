@@ -101,7 +101,7 @@ html, body {
     &__messages {
         display: flex;
         flex-direction: column;
-        align-items: center;      
+        align-items: center;  
     }
 
     &__message {
@@ -109,7 +109,8 @@ html, body {
         background-color: #101010;
         padding: 1rem;
         border-radius: 5px;
-        display: flex;
+        display: flex;  
+        position: relative;
 
         &--user {
             display: flex;
@@ -121,13 +122,20 @@ html, body {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-around;
         }
 
         &--title {
             font-size: 1.2rem;
             text-decoration: underline;
             font-weight: 800;
+        }
+
+        &--delete {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0.2rem;
         }
     }
    
