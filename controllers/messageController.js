@@ -1,5 +1,6 @@
 const Message = require('../models/messageModel');
 const { body, validationResult } = require('express-validator');
+const { nextTick } = require('async');
 
 exports.message_get = (req, res, next) => {
   if (!res.locals.currentUser) {
@@ -49,3 +50,13 @@ exports.message_post = [
     });
   },
 ];
+
+exports.message_delete_post = (req, res, next) => {
+  Message.findByIdAndRemove(req.body.messageid, (err) => {
+    if (err) {
+      return next(err);
+    }
+
+    res.redirect('/');
+  });
+};
