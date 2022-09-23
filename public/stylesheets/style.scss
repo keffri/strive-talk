@@ -97,6 +97,39 @@ html, body {
         display: flex;
         justify-content: space-between;
     }
+
+    &__messages {
+        display: flex;
+        flex-direction: column;
+        align-items: center;      
+    }
+
+    &__message {
+        margin: 0.5rem 0;
+        background-color: #101010;
+        padding: 1rem;
+        border-radius: 5px;
+        display: flex;
+
+        &--user {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &--info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &--title {
+            font-size: 1.2rem;
+            text-decoration: underline;
+            font-weight: 800;
+        }
+    }
    
 }
 

@@ -91,6 +91,34 @@ html, body {
   display: flex;
   justify-content: space-between;
 }
+.browser__messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.browser__message {
+  margin: 0.5rem 0;
+  background-color: #101010;
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+}
+.browser__message--user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.browser__message--info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.browser__message--title {
+  font-size: 1.2rem;
+  text-decoration: underline;
+  font-weight: 800;
+}
 
 .user__nav {
   max-width: 700px;
