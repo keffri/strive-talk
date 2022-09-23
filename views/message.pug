@@ -1,0 +1,29 @@
+extends layout 
+
+block content 
+    div(class="container")
+        section(class="login")
+            if !currentUser
+                p #{noUser}
+                button
+                    a(href="/sign-up") SIGN UP
+                button
+                    a(href="/log-in") LOG IN
+                button
+                    a(href="/") HOME
+            else if !currentUser.isMember || !currentUser.isAdmin || !currentUser.isMember && !currentUser.isAdmin
+                p To post a new message you must be a member and/or an admin.
+                button
+                    a(href="/member") MEMBER ACCESS
+                button
+                    a(href="/admin") ADMIN ACCESS
+                button
+                    a(href="/") HOME
+            else 
+                h1(class="login__title") NEW MESSAGE
+                form(class="login__form" action="/new-message" method="POST")
+                    label(class="login__label" for="subject") Subject:
+                    input(class="login__input" name="subject" type="text" required="true")
+                    label(class="login__label" for="message") Message:
+                    textarea(name="message" style="resize: none" rows="8" required="true")
+                    button(class="login__button") SUBMIT
