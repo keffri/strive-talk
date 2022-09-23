@@ -6,7 +6,7 @@ block content
             h1(class="login__title") Login
             form(class="login__form" action="/log-in" method="POST")
                 label(class="login__label" for="username") Username:
-                input(class="login__input" name="username" type="text")
+                input(class="login__input" name="username" type="text" required="true")
                 label(class="login__label" for="password") Password:
-                input(class="login__input" name="password" type="password")
+                input(class="login__input" name="password" type="password" required="true")
                 button(class="login__button") Log In
