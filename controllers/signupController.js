@@ -3,7 +3,13 @@ const bcrypt = require('bcryptjs');
 const { body, validationResult } = require('express-validator');
 
 exports.signup_get = (req, res, next) => {
-  res.render('signup');
+  if (res.locals.currentUser) {
+    return res.render('signup', {
+      alreadyUser:
+        'You are are already logged in. Please log out if you wish to sign up a new user.',
+    });
+  }
+  return res.render('signup');
 };
 
 exports.signup_post = [
