@@ -1,6 +1,6 @@
 <h1>Strive Talk</h1>
 
-Strive Talk is an message board where you can view messages, but only members and administrators are able to create them. This application is built with NodeJS, Express, Pug, Mongoose, MongoDB and Passport for authentication.
+Strive Talk is a message board where you can view messages, but only members and administrators are able to create them. This application is built with NodeJS, Express, Pug, Mongoose, MongoDB and Passport for authentication.
 
 👤 **Keffri Neal**
 
