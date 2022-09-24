@@ -15,7 +15,7 @@ exports.signup_get = (req, res, next) => {
 exports.signup_post = [
   body('username')
     .trim()
-    .isLength({ min: 4, max: 16 })
+    .isLength({ min: 3, max: 16 })
     .escape()
     .withMessage('Username must be at least 4 characters.'),
   body('password')
@@ -30,16 +30,15 @@ exports.signup_post = [
     .withMessage('Password must be at least 8 characters.')
     .custom(async (value, { req }) => {
       if (value !== req.body.password) {
-        throw new Error('Passwords do not match');
+        throw new Error('Passwords do not match!');
       }
       return true;
     }),
   async (req, res, next) => {
     const errors = validationResult(req);
-
     if (!errors.isEmpty()) {
       // Errors are present
-      return res.render('signup', { passwordFail: 'Passwords do not match.' });
+      return res.render('signup', { errors: errors.errors });
     }
 
     try {
