@@ -90,8 +90,7 @@ block content
                             input(id="bridget" type="radio" name="character" value="bridget" required="true")
                             label(class="character bridget" for="bridget")     
 
-                    if (passwordFail)
-                        p(style="color: red") #{passwordFail}
-                    if (userFail)
-                        p(style="color: red") #{userFail}
+                    if errors
+                        each error in errors
+                            p(style="color: red") #{error.param} : #{error.msg}
                     button(class="signup__button") LET'S ROCK
