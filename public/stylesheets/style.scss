@@ -219,7 +219,7 @@ html, body {
     &__form--section {
         display: flex;
         flex-direction: column;
-        margin-bottom: 1rem;
+        margin-bottom: 0.25rem;
     }
 
     &__label {
@@ -232,6 +232,7 @@ html, body {
     }
 
     &__button {
+        margin-top: 0.75rem;
         height: 2rem;
     }
 }
