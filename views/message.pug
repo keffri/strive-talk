@@ -4,20 +4,20 @@ block content
     div(class="container")
         section(class="login")
             if !currentUser
-                p #{noUser}
-                button
+                p(class="login__text") #{noUser}
+                button(class="btn")
                     a(href="/sign-up") SIGN UP
-                button
+                button(class="btn")
                     a(href="/log-in") LOG IN
-                button
+                button(class="btn")
                     a(href="/") HOME
             else if !currentUser.isMember || !currentUser.isAdmin || !currentUser.isMember && !currentUser.isAdmin
-                p To post a new message you must be a member and/or an admin.
-                button
+                p(class="login__text") To post a new message you must be a member and/or an admin.
+                button(class="btn")
                     a(href="/member") MEMBER ACCESS
-                button
+                button(class="btn")
                     a(href="/admin") ADMIN ACCESS
-                button
+                button(class="btn")
                     a(href="/") HOME
             else 
                 h1(class="login__title") NEW MESSAGE
