@@ -5,7 +5,7 @@ block content
         section(class="access")
             h1(class="access__title") MEMBER ACCESS
             if !currentUser 
-                p #{noUser}
+                p(class="access__text") #{noUser}
             else if (user.isMember)
                 div(class="access__success")
                     p(class="access__success--text" style="color: blue") YOU ARE A MEMBER
