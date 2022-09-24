@@ -226,6 +226,11 @@ html, body {
   height: 2rem;
   margin: 1rem 0;
 }
+.login__text {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
 .access {
   display: flex;
@@ -265,6 +270,11 @@ html, body {
   font-weight: 800;
   margin: 2rem 0;
 }
+.access__text {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
 .adminAccess {
   display: flex;
@@ -293,6 +303,11 @@ html, body {
 .adminAccess__button {
   height: 2rem;
   margin: 1rem 0;
+}
+
+.btn {
+  height: 2rem;
+  margin: 0.5rem;
 }
 
 .character-container {
