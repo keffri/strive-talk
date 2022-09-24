@@ -91,6 +91,7 @@ block content
                             label(class="character bridget" for="bridget")     
 
                     if errors
-                        each error in errors
-                            p(style="color: red") #{error.param} : #{error.msg}
+                        ol 
+                            each error in errors
+                                li(style="color: red") - #{error.param} : #{error.msg}
                     button(class="signup__button") LET'S ROCK
