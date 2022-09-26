@@ -6,6 +6,12 @@ block content
             h1(class="access__title") ADMIN ACCESS
             if !currentUser 
                 p(class="access__text") #{noUser}
+                button(class="btn")
+                    a(href="/") HOME
+                button(class="btn")
+                    a(href="/sign-up") SIGN UP
+                button(class="btn")
+                    a(href="/log-in") LOG IN
             else if (user.isAdmin)
                 div(class="access__success")
                     p(class="access__success--text" style="color: blue") YOU ARE AN ADMIN
