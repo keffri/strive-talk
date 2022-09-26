@@ -15,7 +15,7 @@ Strive Talk is a message board where you can view messages, but only members and
     </ul>        
 </ol>
 
-Give it a try here: https://ancient-falls-37465.herokuapp.com/
+Give it a try here: https://strive-talk.herokuapp.com/
 
 <p align="center">
     <img src="/public/images/striveTalkPreview.png" width="1000" title="Strive Talk Preview">
