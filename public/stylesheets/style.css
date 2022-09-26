@@ -69,11 +69,11 @@ html, body {
   text-align: center;
 }
 .header__logo {
-  width: 500px;
+  max-width: 650px;
 }
 
 .browser__nav {
-  max-width: 500px;
+  max-width: 600px;
   background-color: #101010;
   padding: 0.75rem 0.5rem;
   border-radius: 0.5rem;
@@ -95,9 +95,14 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
+}
+.browser__message:first-child {
+  margin-top: 1rem;
 }
 .browser__message {
-  margin: 0.5rem 0;
+  width: 100%;
+  max-width: 700px;
   background-color: #101010;
   padding: 1rem;
   border-radius: 5px;
@@ -108,12 +113,14 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: underline;
 }
 .browser__message--info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  width: 100%;
 }
 .browser__message--title {
   font-size: 1.2rem;
@@ -125,10 +132,11 @@ html, body {
   top: 0;
   right: 0;
   margin: 0.2rem;
+  cursor: pointer;
 }
 
 .user__nav {
-  max-width: 700px;
+  max-width: 650px;
   background-color: #101010;
   padding: 0.75rem 0.5rem;
   border-radius: 0.5rem;
@@ -161,7 +169,7 @@ html, body {
 }
 
 .signup {
-  width: 85%;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -173,14 +181,14 @@ html, body {
   font-size: 2rem;
   text-align: center;
   text-decoration: underline;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
 }
 .signup__form {
   display: flex;
   flex-direction: column;
 }
 .signup__button {
-  height: 1.5rem;
+  height: 1rem;
 }
 .signup__form--section {
   display: flex;
@@ -195,7 +203,7 @@ html, body {
   height: 2rem;
 }
 .signup__button {
-  margin-top: 0.75rem;
+  margin-top: 0.25rem;
   height: 2rem;
 }
 
@@ -203,7 +211,8 @@ html, body {
   display: flex;
   flex-direction: column;
   background-color: #101010;
-  width: 60%;
+  width: 100%;
+  max-width: 700px;
   padding: 1rem 1rem;
 }
 .login__title {
@@ -237,7 +246,7 @@ html, body {
   display: flex;
   flex-direction: column;
   background-color: #101010;
-  width: 60%;
+  max-width: 700px;
   padding: 1rem 1rem;
 }
 .access__title {
