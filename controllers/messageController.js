@@ -19,7 +19,7 @@ exports.message_post = [
     .withMessage('Please enter a subject.')
     .isLength({ max: 30 })
     .escape()
-    .withMessage('Subject contains too many characters.'),
+    .withMessage('Subject contains too many characters. (Max: 30)'),
   body('message')
     .trim()
     .isLength({ min: 1 })
@@ -27,15 +27,12 @@ exports.message_post = [
     .withMessage('Please enter a message.')
     .isLength({ max: 140 })
     .escape()
-    .withMessage('Message contains too many characters.'),
+    .withMessage('Message contains too many characters. (Max: 140)'),
   (req, res, next) => {
     const errors = validationResult(req);
-
+    console.log(errors.errors);
     if (!errors.isEmpty()) {
-      return res.render('message', {
-        wrongLength:
-          'Please make sure your message/subject is the correct length.',
-      });
+      return res.render('message', { errors: errors.errors });
     }
 
     new Message({
