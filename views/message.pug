@@ -11,7 +11,7 @@ block content
                     a(href="/log-in") LOG IN
                 button(class="btn")
                     a(href="/") HOME
-            else if !currentUser.isMember || !currentUser.isAdmin || !currentUser.isMember && !currentUser.isAdmin
+            else if !currentUser.isMember && !currentUser.isAdmin
                 p(class="login__text") To post a new message you must be a member and/or an admin.
                 button(class="btn")
                     a(href="/member") MEMBER ACCESS
