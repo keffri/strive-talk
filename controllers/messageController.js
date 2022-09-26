@@ -30,9 +30,8 @@ exports.message_post = [
     .withMessage('Message contains too many characters. (Max: 140)'),
   (req, res, next) => {
     const errors = validationResult(req);
-    console.log(errors.errors);
     if (!errors.isEmpty()) {
-      return res.render('message', { errors: errors.errors });
+      return res.render('message', { errors: errors.array() });
     }
 
     new Message({
