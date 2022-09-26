@@ -30,7 +30,7 @@ exports.signup_post = [
     .withMessage('Password must be at least 8 characters.')
     .custom(async (value, { req }) => {
       if (value !== req.body.password) {
-        throw new Error('Passwords do not match!');
+        throw new Error('Passwords must match each other.');
       }
       return true;
     }),
