@@ -509,37 +509,31 @@ a {
 }
 
 
-// @media only screen and (max-width: 992px) {
-//     .container {
-//         width: 100%;
-//         margin: 0 auto;
-//     }
+@media only screen and (max-width: 990px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
 
-//     .signup {
-//       width: 80%;
-//       min-height: 900px;
+    .signup {
+      width: 80%;
+      height: 1400px;
 
-//       &__form {
-//         height: 90%;
-//       }
-//     }
+      &__form {
+        height: 100%;
+        display: flex;
+        gap: 2rem;
+      }
+    }
 
-//     .character {
-//         width: 160px;
-//         height: 160px;
-//     }
-//   }
+    .character {
+        width: 150px;
+        height: 150px;
+    }
 
-//   @media only screen and (max-width: 768px) {
-//     .signup{
-//       width: 80%;
-//       padding: 2em;
-//     }
-//   }
-  
-//   @media only screen and (max-width: 576px) {
-//     .signup{
-//       width: 100%;
-//     }
-//   }
-  
+    .character-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+  }
+

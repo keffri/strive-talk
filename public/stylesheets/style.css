@@ -436,4 +436,28 @@ a {
   background-image: url("../images/bridget_ggst.png");
 }
 
+@media only screen and (max-width: 990px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .signup {
+    width: 80%;
+    height: 1400px;
+  }
+  .signup__form {
+    height: 100%;
+    display: flex;
+    gap: 2rem;
+  }
+  .character {
+    width: 150px;
+    height: 150px;
+  }
+  .character-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
