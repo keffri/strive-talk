@@ -25,5 +25,10 @@ block content
                     label(class="login__label" for="subject") Subject:
                     input(class="login__input" name="subject" type="text" required="true")
                     label(class="login__label" for="message") Message:
-                    textarea(name="message" style="resize: none" rows="8" required="true")
+                    textarea(name="message" style="resize: none" rows="8" required="true")                   
+                    if errors
+                        ol
+                            each error in errors 
+                                 p(style="color: red") - #{error.param}: #{error.msg}
+
                     button(class="login__button") SUBMIT
