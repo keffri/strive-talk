@@ -31,6 +31,7 @@ const UserSchema = new Schema({
       'giovanna',
       'goldlewis',
       'bridget',
+      'sin',
     ],
     default: 'sol',
   },
