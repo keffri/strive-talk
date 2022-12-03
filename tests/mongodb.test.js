@@ -1,6 +1,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 const User = require('../models/userModel');
+const Message = require('../models/messageModel');
 
 beforeAll(async () => {
   await mongoose.connect(process.env.MONGODB_APPCODE, {
@@ -21,6 +22,24 @@ describe('checking user doc within users collectin', () => {
     });
 
     expect(keffri).toBeDefined();
+  });
+});
+
+describe('checks messages by users from messages collection', () => {
+  it('user potemkin posted "we live in a society" message.', async () => {
+    const potemkin = await User.findOne({ username: 'potemkin' }).populate(
+      '_id'
+    );
+
+    expect(potemkin).toBeDefined();
+
+    const message = await Message.findOne({
+      message: 'WE LIVE IN A SOCIETY!',
+    }).populate('user');
+
+    expect(message).toBeDefined();
+
+    expect(message.user._id).toEqual(potemkin._id);
   });
 });
 
