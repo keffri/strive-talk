@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1670105225443" clover="3.2.0">
-  <project timestamp="1670105225443" name="All files">
+<coverage generated="1670181618334" clover="3.2.0">
+  <project timestamp="1670181618334" name="All files">
     <metrics statements="56" coveredstatements="55" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="56" coveredelements="55" complexity="0" loc="56" ncloc="56" packages="1" files="2" classes="2"/>
     <file name="messageModel.js" path="/home/keffri/coding/dev-projects/strive-talk/models/messageModel.js">
       <metrics statements="16" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
