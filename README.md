@@ -21,6 +21,14 @@ Give it a try here: https://strive-talk.herokuapp.com/
     <img src="/public/images/striveTalkPreview.png" width="1000" title="Strive Talk Preview">
 </p>
 
+Testing done with Jest and Cypress.
+
+- This test signs up a user, logs them in, obtains admin access and ultimately posts a message to the board.
+
+![cypress testing](https://i.imgur.com/FFuFmJ8.gif)
+
+
+
 👤 **Keffri Neal**
 
 - LinkedIn: [@keffri](https://www.linkedin.com/in/keffri/)
