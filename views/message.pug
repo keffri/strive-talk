@@ -23,9 +23,9 @@ block content
                 h1(class="login__title") NEW MESSAGE
                 form(class="login__form" action="/new-message" method="POST")
                     label(class="login__label" for="subject") Subject:
-                    input(class="login__input" name="subject" type="text" required="true")
+                    input(class="login__input subject" name="subject" type="text" required="true")
                     label(class="login__label" for="message") Message:
-                    textarea(name="message" style="resize: none" rows="8" required="true")                   
+                    textarea(name="message" class="message" style="resize: none" rows="8" required="true")                   
                     if errors
                         ol
                             each error in errors 

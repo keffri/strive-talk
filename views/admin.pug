@@ -16,11 +16,11 @@ block content
                 div(class="access__success")
                     p(class="access__success--text" style="color: blue") YOU ARE AN ADMIN
                     button
-                        a(href="/") RETURN
+                        a(class="return" href="/") RETURN
             else 
                 form(class="access__form" action="/admin" method="POST")
                     label(class="access__label" for="adminCode") Please enter the password:
-                    input(Class="access__input" name="adminCode" type="password" required="true")
+                    input(Class="access__input admin" name="adminCode" type="password" required="true")
                     if passwordFail
                         p(style="color: red") #{passwordFail}
                     button(class="access__button") ENTER
