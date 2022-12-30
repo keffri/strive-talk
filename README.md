@@ -1,4 +1,6 @@
-<h1>Strive Talk</h1>
+Give it a try here: <a href="https://strive-talk.herokuapp.com/">Strive Talk</a>
+
+h1>Strive Talk</h1>
 
 Strive Talk is a message board where you can view messages, but only members and administrators are able to create them. This application is built with NodeJS, Express, Pug, Mongoose, MongoDB and Passport for authentication.
 
@@ -14,8 +16,6 @@ Strive Talk is a message board where you can view messages, but only members and
         <li>Admin: Admins have all of the previous privileges but also have the ability to delete messages.</li> 
     </ul>        
 </ol>
-
-Give it a try here: https://strive-talk.herokuapp.com/
 
 <p align="center">
     <img src="/public/images/striveTalkPreview.png" width="1000" title="Strive Talk Preview">
