@@ -1,6 +1,6 @@
 Give it a try here: <a href="https://strive-talk.herokuapp.com/">Strive Talk</a>
 
-h1>Strive Talk</h1>
+<h1>Strive Talk</h1>
 
 Strive Talk is a message board where you can view messages, but only members and administrators are able to create them. This application is built with NodeJS, Express, Pug, Mongoose, MongoDB and Passport for authentication.
 
